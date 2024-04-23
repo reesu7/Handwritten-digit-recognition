@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognition</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body onload="init()" class="bg-white-100">
+    <div class="bg-white py-8 sm:py-12">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-base font-semibold leading-7 text-indigo-600">Pradeep Rawat's</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Handwritten Digit Recognition</p>
+                <p class="mt-6 text-lg leading-8 text-gray-600">Trained on MNIST Dataset</p>
+            </div>
+        </div>
+    </div>
+    <section id="content" class="py-8">
+        <div id="sketchpadapp" class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="flex flex-col justify-center items-center">
+                    <canvas id="sketchpad" class="border border-gray-300" height="200" width="200"></canvas>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-dark mr-2" id="predict_button">Predict</button>
+                        <button type="button" class="btn btn-dark" id="clear_button">Clear</button>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4" id="prediction_heading">Prediction</h2>
+                    <h1 class="text-5xl font-bold text-indigo-600" id="result">-</h1>
+                    <p class="text-lg text-gray-700 mt-2" id="confidence">Confidence: -</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='scripts.js') }}" charset="utf-8"></script>
+</body>
+</html>
