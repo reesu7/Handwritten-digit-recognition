@@ -9,7 +9,8 @@ Additionally, the application leverages Chart.js, a JavaScript library for creat
 
 
 
-
+## Demo Video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/I0dgqBkWrsY/0.jpg)](https://www.youtube.com/watch?v=I0dgqBkWrsY)
 
 
 
