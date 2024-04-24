@@ -23,18 +23,19 @@
                 <div class="flex flex-col justify-center items-center">
                     <canvas id="sketchpad" class="border border-gray-300" height="200" width="200"></canvas>
                     <div class="mt-4">
-                        <button type="button" class="btn btn-dark mr-2" id="predict_button">Predict</button>
                         <button type="button" class="btn btn-dark" id="clear_button">Clear</button>
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4" id="prediction_heading">Prediction</h2>
-                    <h1 class="text-5xl font-bold text-indigo-600" id="result">-</h1>
-                    <p class="text-lg text-gray-700 mt-2" id="confidence">Confidence: -</p>
+                    <!-- Add div to contain the bar chart -->
+                    <div class="mt-8">
+                        <canvas id="barChart" width="400" height="400"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ url_for('static', filename='scripts.js') }}" charset="utf-8"></script>
 </body>
 </html>
